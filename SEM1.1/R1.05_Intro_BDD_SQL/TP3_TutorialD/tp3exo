@@ -1,0 +1,31 @@
+TYPE DNOFOUR POSSREP {SNUM CHAR};
+TYPE DNOMF POSSREP {DNOMF CHAR};
+TYPE DVILLE POSSREP {DVILLE CHAR};
+
+TYPE DNOFOUR POSSREP DNOFOUR { C CHAR
+CONSTRAINT LENGTH(C) <=3 AND
+STARTS_WITH(C, ’F’) AND
+IS_DIGITS(SUBSTRING(C,1))
+}
+
+VAR fournisseur BASE RELATION
+{
+    no_fournisseur DNOFOUR,
+    nom_fournisseur DNOMF,
+    nom_ville DVILLE 
+}KEY{no_fournisseur,nom_fournisseur,nom_ville};
+
+fournisseur = RELATION {
+TUPLE {no_fournisseur DNOFOUR(’F01’),
+nom_fournisseur DNOMF(’Bourhis’), nom_ville DVILLE{Paris}},
+TUPLE {no_fournisseur DNOFOUR(’F02’),
+nom_fournisseur DNOMF(’Bourhis’), nom_ville DVILLE{Paris}},
+TTUPLE {no_fournisseur DNOFOUR(’F03’),
+nom_fournisseur DNOMF(’Collet’), nom_ville DVILLE{Reims}},
+TUPLE {no_fournisseur DNOFOUR(’F04’),
+nom_fournisseur DNOMF(’Bossuet’), nom_ville DVILLE{Dijon}},
+TUPLE {no_fournisseur DNOFOUR(’F05’),
+nom_fournisseur DNOMF(’Mercier’), nom_ville DVILLE{Riec}},
+TUPLE {no_fournisseur DNOFOUR(’F06’),
+nom_fournisseur DNOMF(Tanquy’), nom_ville DVILLE{Lannion}},
+}

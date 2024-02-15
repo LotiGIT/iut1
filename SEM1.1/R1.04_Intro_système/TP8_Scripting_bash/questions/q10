@@ -1,0 +1,6 @@
+#!/bin/bash
+for fic in A B C
+do
+	mkdir "folder"$fic
+done
+ls -l

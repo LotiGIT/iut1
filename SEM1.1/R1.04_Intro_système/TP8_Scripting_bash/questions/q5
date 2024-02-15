@@ -1,0 +1,5 @@
+#!/bin/bash
+read -p "Créer le fichier : " nomfichier
+nomfichier=$nomfichier".txt"
+touch $nomfichier
+ls 

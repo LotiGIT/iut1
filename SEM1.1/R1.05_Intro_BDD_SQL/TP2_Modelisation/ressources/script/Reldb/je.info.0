@@ -1,0 +1,2 @@
+2023-11-15 16:03:11.289 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05/TP2_Modelisation/ressources/script/Reldb] Start DB remove/truncate scan, id=1 dbId=22 dbName=relvar_141
+2023-11-15 16:03:11.289 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05/TP2_Modelisation/ressources/script/Reldb] End DB remove/truncate scan, id=1 scanned=2 dbId=22 dbName=relvar_141

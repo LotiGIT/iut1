@@ -1,0 +1,29 @@
+body 
+{
+    font-family: "Arimo";
+    font-size: 1em;
+}
+
+h1,h2
+{
+    font-family: Roboto;
+    
+}
+
+h1
+{
+    font-size: 4em;
+}
+
+footer
+{
+    font-size: 0.8em;
+}
+
+/*
+    image en float right sur les 3 articles
+    pour curiosité faire une section ou un div qui englobe les puces et les images pour donner une orientation différente : géré en flex.
+    utilisé un background pour le titre du header pour mettre l'image.
+    créer un div pour l'image palmier et le titre et les foutre de gauche à droite et le header de haut en bas
+
+*/

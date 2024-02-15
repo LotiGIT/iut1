@@ -1,0 +1,216 @@
+!!! NE MODIFIEZ PAS LA STRUCTURE DE CE FICHIER !!!
+
+Nom :	JANOT	
+Prénom :	Eliott
+Groupe TP : 1B1
+
+IMPORTANT : si vous avez rencontré un problème pendant la séance, décrivez-le entre les lignes de tirets :
+----------------------------------------------------------------
+aucun problème rencontré (quota disque, plantage, perte du travail...) <-- ICI, PAS EN DESSOUS !!
+----------------------------------------------------------------
+
+
+Exercice 1.1.1 (codage de conditions)
+----------------------------------------------------------------
+;; programme
+
+; V2 == 9 ?
+	LD R0, [V2]
+	CMP R0, 9
+	
+; V1 != V2 ?
+	LD R0, [V1]
+	CMP R0, [V2]
+	
+; V2 > V1 ?
+	LD R0, [V2]
+	CMP R0, [V1]
+	
+; V1 + 1 == 6 ?
+	LD R0, [V1]
+	ADD R0, 1
+	CMP R0, 6
+
+; V1 + V2 - 1 < 3 ?
+	LD R0, [V1]
+	ADD R0, [V2]
+	SUB R0, 1
+	CMP R1, 3
+	
+; V1 + 1 > V2 + 3 ?
+	LD R0, [V1]
+	ADD R0, 1
+	LD R1, [V2]
+	ADD R1, 3
+	CMP R0, R1
+
+; 2*V1 - 1 >= V1 + 2 ?
+	LD R0, [V1]
+	ADD  R0, R0
+	SUB R0, 1
+	LD R1, [V1]
+	ADD R1, 2
+	CMP R0, R1
+	
+
+; 12 == 17 ?
+	
+; non mais ça va pas ? cette condition toujours fausse n'est pas à coder !
+; fin du programme
+HLT
+;; variables du programme
+V1: RB 1 ; RB 1 = réserver 1 octet non initialisé
+V2: RB 1 ; RB 1 = réserver 1 octet non initialisé
+----------------------------------------------------------------
+
+
+Exercice 2 (chiffre hexadécimal)
+----------------------------------------------------------------
+;; programme
+; lire un nombre sur le port 10 et le mettre dans N1
+IN R0, 10
+ST R0, [N1]
+; partie à programmer
+; if (N1 < 16) {
+; N2 = N1 + 55 ; 55='A'-10
+; }
+; if (N1 <= 9) {
+; N2 = N1 + '0'
+; }
+; if (N1 > 15) {
+; N2 = '?'
+; }
+
+si1: 	CMP R0, 16
+        BHS si2
+		
+alors1:	
+        LD R1, 55
+        ADD R1, R0
+        ST R1, [N2]
+		
+si2:	LD R0, [N1]
+		CMP R0, 9
+		BHI si3
+
+alors2: LD R0, [N1]
+		ADD R0, '0'
+        ST R0, [N2]
+
+si3:	LD R0, [N1]
+		CMP R0, 15
+		BLS finsi3
+	
+alors3:	LD R0, [N2]
+		CMP R0, '?'
+		
+finsi3: 
+
+LD R0, 11 		; passer le DSKY en mode 11
+OUT R0, 255
+LD R0, [N2] 	; R0 = valeur de N2
+OUT R0, 11 		; R0 = code ascii => affichage du caractère
+; fin du programme
+HLT
+;; variables du programme
+N1: RB 1 ; RB 1 = réserver 1 octet non initialisé
+N2: DB '@'
+----------------------------------------------------------------
+
+
+Exercice 3 (division euclidienne)
+----------------------------------------------------------------
+;; division euclidienne d'un entier par un autre
+; lire un nombre sur le port 10 et le mettre dans N1
+
+IN R0, 10
+ST R0, [N1]
+; lire un autre nombre sur le port 10 et le mettre dans N2
+IN R0, 10
+ST R0, [N2]
+
+; partie à programmer
+; if (N2 > 0) {
+; Q = 0
+; while (N1 >= N2) {
+; N1 = N1 - N2
+; Q = Q + 1
+; }
+; } else {
+; Q = 255
+; N1 = 255
+; }
+; afficher Q puis N1 sur le port 10
+
+si:         CMP R0, 0
+            BLS sinon
+
+alors:      LD R1, [Q]
+            CMP R1, 0
+
+tantque:    LD R1, [N1]
+            CMP R0, [N1]
+            BLO faire
+
+faire:      
+
+fintantque:
+
+
+sinon:   
+
+LD R0, [Q]
+OUT R0, 10
+LD R0, [N1]
+OUT R0, 10
+; fin du programme
+HLT
+;; variables du programme
+N1: RB 1
+N2: RB 1
+Q: RB 1
+---------------------------------------------------------------
+
+
+Exercice 4 (PGCD)
+----------------------------------------------------------------
+;; calcul du PGCD de deux entiers (non signés)
+; lire un nombre sur le port 10 et le mettre dans N1
+IN R0, 10
+ST R0, [N1]
+; lire un autre nombre sur le port 10 et le mettre dans N2
+IN R0, 10
+ST R0, [N2]
+; partie à programmer
+; while (N1 != N2) {
+; if (N1 > N2) {
+; N1 = N1 - N2
+; } else {
+; N2 = N2 - N1
+; }
+; }
+; afficher N1 sur le port 10
+
+tantque:
+
+faire: 
+si:
+
+sinon:
+
+fin:
+
+LD R0, [N1]
+OUT R0, 10
+; fin du programme
+HLT
+;; variables du programme
+N1: RB 1
+N2: RB 1
+----------------------------------------------------------------
+
+
+Exercice 5 (méthode de Héron)
+----------------------------------------------------------------
+COLLEZ VOTRE PROGRAMME ENTRE CES DEUX LIGNES <-- ICI, PAS EN DESSOUS !!
+----------------------------------------------------------------

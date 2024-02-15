@@ -1,0 +1,14 @@
+2024-01-16 12:41:55.288 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] Start DB remove/truncate scan, id=1 dbId=22 dbName=relvar_141
+2024-01-16 12:41:55.289 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] End DB remove/truncate scan, id=1 scanned=2 dbId=22 dbName=relvar_141
+2024-01-16 12:42:01.420 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] Start DB remove/truncate scan, id=2 dbId=24 dbName=relvar_144
+2024-01-16 12:42:01.420 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] End DB remove/truncate scan, id=2 scanned=0 dbId=24 dbName=relvar_144
+2024-01-16 12:42:01.425 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] Start DB remove/truncate scan, id=3 dbId=25 dbName=relvar_146
+2024-01-16 12:42:01.426 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] End DB remove/truncate scan, id=3 scanned=0 dbId=25 dbName=relvar_146
+2024-01-16 12:42:01.439 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] Start DB remove/truncate scan, id=4 dbId=27 dbName=relvar_148
+2024-01-16 12:42:01.439 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] End DB remove/truncate scan, id=4 scanned=0 dbId=27 dbName=relvar_148
+2024-01-16 12:42:01.445 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] Start DB remove/truncate scan, id=5 dbId=28 dbName=relvar_150
+2024-01-16 12:42:01.445 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] End DB remove/truncate scan, id=5 scanned=0 dbId=28 dbName=relvar_150
+2024-01-16 12:42:01.458 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] Start DB remove/truncate scan, id=6 dbId=30 dbName=relvar_152
+2024-01-16 12:42:01.459 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] End DB remove/truncate scan, id=6 scanned=0 dbId=30 dbName=relvar_152
+2024-01-16 12:42:01.465 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] Start DB remove/truncate scan, id=7 dbId=31 dbName=relvar_154
+2024-01-16 12:42:01.466 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/Reldb] End DB remove/truncate scan, id=7 scanned=0 dbId=31 dbName=relvar_154

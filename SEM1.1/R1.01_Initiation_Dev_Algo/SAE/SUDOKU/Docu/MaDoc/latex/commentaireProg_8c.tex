@@ -1,0 +1,185 @@
+\hypertarget{commentaireProg_8c}{}\doxysection{Référence du fichier commentaire\+Prog.\+c}
+\label{commentaireProg_8c}\index{commentaireProg.c@{commentaireProg.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{commentaireProg_8c_a7b29335add3a553ed85d0e3ace85629c}{TAILLE}}~9
+\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \mbox{\hyperlink{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}}\mbox{[}\mbox{\hyperlink{commentaireProg_8c_a7b29335add3a553ed85d0e3ace85629c}{TAILLE}}\mbox{]}\mbox{[}\mbox{\hyperlink{commentaireProg_8c_a7b29335add3a553ed85d0e3ace85629c}{TAILLE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em type int de TAILLE entiers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{commentaireProg_8c_aeba1131f364a3385e30901935e57cd87}{afficher\+Grille}} (\mbox{\hyperlink{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}} g)
+\begin{DoxyCompactList}\small\item\em réalise l\textquotesingle{}affichage de la grille et son contenu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{commentaireProg_8c_a69cd9f7235b48c38f0b77af85ab869b9}{charger\+Grille}} (\mbox{\hyperlink{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}} g)
+\begin{DoxyCompactList}\small\item\em Charge une grille de taille g. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{commentaireProg_8c_a966ca9fcadeffee998c61221bdc6f1da}{grille\+Pleine}} (\mbox{\hyperlink{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}} grille1)
+\begin{DoxyCompactList}\small\item\em Fonction qui indique si la grille est remplie. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{commentaireProg_8c_a51af30a60f9f02777c6396b8247e356f}{main}} ()
+\begin{DoxyCompactList}\small\item\em Programme principal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{commentaireProg_8c_a13ccd70d83bf3cfb0fe88187f0482ded}{possible}} (\mbox{\hyperlink{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}} grille, int num\+Ligne, int num\+Colonne, int valeur)
+\begin{DoxyCompactList}\small\item\em Fonction qui indique si c\textquotesingle{}est possible de rentrer une valeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{commentaireProg_8c_afe192687646153599e94a3f17f7a23d5}{saisir}} (int $\ast$valeur)
+\begin{DoxyCompactList}\small\item\em lit au clavier une valeur \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{commentaireProg_8c_ada00e3f5f3fa89ad158b4064f9b53e7d}{bloc}} = 2
+\item 
+const int \mbox{\hyperlink{commentaireProg_8c_a8a88c8f5ea56a0619c8ded1608eb7b9e}{max}} = 9
+\item 
+const int \mbox{\hyperlink{commentaireProg_8c_ade06e86e6b5a800c5c03a4ee98a454c9}{min}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{commentaireProg_8c_a7b29335add3a553ed85d0e3ace85629c}\label{commentaireProg_8c_a7b29335add3a553ed85d0e3ace85629c}} 
+\index{commentaireProg.c@{commentaireProg.c}!TAILLE@{TAILLE}}
+\index{TAILLE@{TAILLE}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{TAILLE}{TAILLE}}
+{\footnotesize\ttfamily \#define TAILLE~9}
+
+
+
+\doxysubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}\label{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}} 
+\index{commentaireProg.c@{commentaireProg.c}!tGrille@{tGrille}}
+\index{tGrille@{tGrille}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{tGrille}{tGrille}}
+{\footnotesize\ttfamily t\+Grille}
+
+
+
+type int de TAILLE entiers 
+
+Le type int sert à définir une taille de tableau. 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{commentaireProg_8c_aeba1131f364a3385e30901935e57cd87}\label{commentaireProg_8c_aeba1131f364a3385e30901935e57cd87}} 
+\index{commentaireProg.c@{commentaireProg.c}!afficherGrille@{afficherGrille}}
+\index{afficherGrille@{afficherGrille}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{afficherGrille()}{afficherGrille()}}
+{\footnotesize\ttfamily void afficher\+Grille (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}}}]{g }\end{DoxyParamCaption})}
+
+
+
+réalise l\textquotesingle{}affichage de la grille et son contenu 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & grille de sudoku\\
+\hline
+\end{DoxyParams}
+Charge en mémoire une grille de sudoku à partir d\textquotesingle{}un fichier dont le nom est lu au clavier. \mbox{\Hypertarget{commentaireProg_8c_a69cd9f7235b48c38f0b77af85ab869b9}\label{commentaireProg_8c_a69cd9f7235b48c38f0b77af85ab869b9}} 
+\index{commentaireProg.c@{commentaireProg.c}!chargerGrille@{chargerGrille}}
+\index{chargerGrille@{chargerGrille}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{chargerGrille()}{chargerGrille()}}
+{\footnotesize\ttfamily void charger\+Grille (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}}}]{g }\end{DoxyParamCaption})}
+
+
+
+Charge une grille de taille g. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em g} & taille de la grille\\
+\hline
+\end{DoxyParams}
+Charge en mémoire une grille de sudoku à partir d\textquotesingle{}un fichier dont le nom est lu au clavier. \mbox{\Hypertarget{commentaireProg_8c_a966ca9fcadeffee998c61221bdc6f1da}\label{commentaireProg_8c_a966ca9fcadeffee998c61221bdc6f1da}} 
+\index{commentaireProg.c@{commentaireProg.c}!grillePleine@{grillePleine}}
+\index{grillePleine@{grillePleine}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{grillePleine()}{grillePleine()}}
+{\footnotesize\ttfamily bool grille\+Pleine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}}}]{grille1 }\end{DoxyParamCaption})}
+
+
+
+Fonction qui indique si la grille est remplie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grille1} & tableau de grille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la grille est pleine, false sinon.
+\end{DoxyReturn}
+Consiste à vérifier si la grille est sur la même ligne, colonne ou bloc \mbox{\Hypertarget{commentaireProg_8c_a51af30a60f9f02777c6396b8247e356f}\label{commentaireProg_8c_a51af30a60f9f02777c6396b8247e356f}} 
+\index{commentaireProg.c@{commentaireProg.c}!main@{main}}
+\index{main@{main}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programme principal. 
+
+\begin{DoxyReturn}{Renvoie}
+Le programme retourne EXIT\+\_\+\+SUCCESS.
+\end{DoxyReturn}
+Programme permettant le fonctionnement du SUDOKU. \mbox{\Hypertarget{commentaireProg_8c_a13ccd70d83bf3cfb0fe88187f0482ded}\label{commentaireProg_8c_a13ccd70d83bf3cfb0fe88187f0482ded}} 
+\index{commentaireProg.c@{commentaireProg.c}!possible@{possible}}
+\index{possible@{possible}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{possible()}{possible()}}
+{\footnotesize\ttfamily bool possible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{commentaireProg_8c_a1b89d9af8baea27f48663c416006e88f}{t\+Grille}}}]{grille,  }\item[{int}]{num\+Ligne,  }\item[{int}]{num\+Colonne,  }\item[{int}]{valeur }\end{DoxyParamCaption})}
+
+
+
+Fonction qui indique si c\textquotesingle{}est possible de rentrer une valeur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grille} & tableau de grille \\
+\hline
+{\em num\+Ligne} & numéro de ligne \\
+\hline
+{\em num\+Colonne} & numéro de colonne \\
+\hline
+{\em valeur} & saisie de valeur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la chaine est vide, false sinon.
+\end{DoxyReturn}
+Consiste à vérifier si une valeur ne se trouve déjà pas sur la même ligne, colonne ou bloc \mbox{\Hypertarget{commentaireProg_8c_afe192687646153599e94a3f17f7a23d5}\label{commentaireProg_8c_afe192687646153599e94a3f17f7a23d5}} 
+\index{commentaireProg.c@{commentaireProg.c}!saisir@{saisir}}
+\index{saisir@{saisir}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{saisir()}{saisir()}}
+{\footnotesize\ttfamily void saisir (\begin{DoxyParamCaption}\item[{int $\ast$}]{valeur }\end{DoxyParamCaption})}
+
+
+
+lit au clavier une valeur 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em valeur} & paramètre en sortie qui contient la valeur saisie.\\
+\hline
+\end{DoxyParams}
+Permet de convertir une chaine de caractère en entier 
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{commentaireProg_8c_ada00e3f5f3fa89ad158b4064f9b53e7d}\label{commentaireProg_8c_ada00e3f5f3fa89ad158b4064f9b53e7d}} 
+\index{commentaireProg.c@{commentaireProg.c}!bloc@{bloc}}
+\index{bloc@{bloc}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{bloc}{bloc}}
+{\footnotesize\ttfamily const int bloc = 2}
+
+\mbox{\Hypertarget{commentaireProg_8c_a8a88c8f5ea56a0619c8ded1608eb7b9e}\label{commentaireProg_8c_a8a88c8f5ea56a0619c8ded1608eb7b9e}} 
+\index{commentaireProg.c@{commentaireProg.c}!max@{max}}
+\index{max@{max}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily const int max = 9}
+
+\mbox{\Hypertarget{commentaireProg_8c_ade06e86e6b5a800c5c03a4ee98a454c9}\label{commentaireProg_8c_ade06e86e6b5a800c5c03a4ee98a454c9}} 
+\index{commentaireProg.c@{commentaireProg.c}!min@{min}}
+\index{min@{min}!commentaireProg.c@{commentaireProg.c}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily const int min = 1}
+

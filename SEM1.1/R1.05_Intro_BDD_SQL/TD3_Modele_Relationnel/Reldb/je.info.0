@@ -1,0 +1,14 @@
+2023-12-12 07:35:58.637 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] Start DB remove/truncate scan, id=1 dbId=22 dbName=relvar_141
+2023-12-12 07:35:58.638 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] End DB remove/truncate scan, id=1 scanned=2 dbId=22 dbName=relvar_141
+2023-12-12 07:36:05.311 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] Start DB remove/truncate scan, id=2 dbId=24 dbName=relvar_188
+2023-12-12 07:36:05.312 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] End DB remove/truncate scan, id=2 scanned=0 dbId=24 dbName=relvar_188
+2023-12-12 07:36:05.481 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] Start DB remove/truncate scan, id=3 dbId=26 dbName=relvar_212
+2023-12-12 07:36:05.482 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] End DB remove/truncate scan, id=3 scanned=0 dbId=26 dbName=relvar_212
+2023-12-12 07:36:05.593 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] Start DB remove/truncate scan, id=4 dbId=28 dbName=relvar_225
+2023-12-12 07:36:05.593 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] End DB remove/truncate scan, id=4 scanned=0 dbId=28 dbName=relvar_225
+2023-12-12 07:36:05.671 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] Start DB remove/truncate scan, id=5 dbId=25 dbName=relvar_193
+2023-12-12 07:36:05.671 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] End DB remove/truncate scan, id=5 scanned=0 dbId=25 dbName=relvar_193
+2023-12-12 07:36:05.691 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] Start DB remove/truncate scan, id=6 dbId=27 dbName=relvar_218
+2023-12-12 07:36:05.691 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] End DB remove/truncate scan, id=6 scanned=0 dbId=27 dbName=relvar_218
+2023-12-12 07:36:05.737 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] Start DB remove/truncate scan, id=7 dbId=29 dbName=relvar_230
+2023-12-12 07:36:05.737 UTC INFO [/home/etuinfo/ejanot/Documents/R1.05_Intro_BDD_SQL/TD3_Modele_Relationnel/Reldb] End DB remove/truncate scan, id=7 scanned=0 dbId=29 dbName=relvar_230

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "#include <stdio.h>
+int main () 
+{
+	return 123;
+} " > prog.c
+gcc prog.c -o prog -Wall && ./prog
+echo $?
+

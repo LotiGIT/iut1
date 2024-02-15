@@ -1,0 +1,219 @@
+body {
+    background-color: #19345A;
+    color: #ffff;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 5px 5px 15px black;
+}
+
+.notation
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.rating {
+    width: 300px;
+    margin: 0 auto 1em;
+    font-size: 45px;
+    overflow:hidden;
+}
+
+.rating a {
+    float: right;
+    color: #aaa;
+    text-decoration: none;
+    /* Transitions sur chaque moteur de recherche */
+    -webkit-transition: color .4s;/*Chrome et Safari*/
+    -moz-transition: color .4s;/*Firefox*/
+    -o-transition: color .4s;/*Opera*/
+    transition: color .4s;/*changement dans le css*/
+}
+
+/************************ Lorsque les liens sont survolés ou en focus, la couleur du texte devient orange et le curseur change pour indiquer qu'ils sont interactifs. *****************************/
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a		{
+    color: orange;
+    cursor: pointer;
+}
+
+/*************** Permet de mettre en surbrillance dans le bon ordre les étoiles ******************/
+.rating2 {
+    direction: rtl;
+}
+/******* Recentre les étoiles **********/
+.rating2 a {
+    float:none
+}
+
+/***********************************    BLOCS   *******************************************/
+
+.GrosBloc
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 180px;
+    background-color: #19345A;
+    background: rgba(0, 0, 0, 0.25);
+    margin: 8%;
+    padding: 1.7%;
+    justify-content: space-around;
+    box-shadow: 5px 5px 15px black;
+    min-height: 100px;
+    
+    
+}
+
+
+.etoilesEntete, h1
+{
+   display: flex;
+   justify-content: center;
+}
+
+
+.sousTitre
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.texte1
+{
+    text-align: justify;
+}
+
+.ecrire
+{
+    margin: 10px;
+}
+
+
+.entete2
+{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+}
+
+.texte2
+{
+    
+    background-color: #0C0C0C;
+    padding: 15px;
+    
+}
+
+.nb
+{
+    color: #BAB6B6;
+}
+
+
+.voirplus
+{
+    display: flex;
+    width: 75px 0;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+
+.critiques
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+/***********************************    MEDIA QUERRIES   *******************************************/
+
+@media screen and (max-width: 1280px){
+    
+}
+
+@media screen and (max-width: 428px){
+    
+}
+
+
+/***********************************    Menu déroulant   *******************************************/
+
+#wrap
+{
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    z-index: 50;
+    position: relative;
+    background-color: black;
+}
+
+.navbar {
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.navbar li {
+    height: auto;
+    width: 300px;
+    float: left;
+    text-align: center;
+    list-style: none;
+    font: normal bold 1.4em/1em Arial, Verdana, Helvetica;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.navbar a {
+    padding: 25px 0;
+    border-left: 1px solid #ccc9c9;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.navbar li:hover,
+a:hover {
+  background-color: grey;
+}
+
+.navbar li ul {
+    display: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li:hover ul {
+display: block;
+}
+
+.navbar li ul li {
+    background-color: #19345A;
+}
+
+.navbar li ul li a {
+    border-left: 1px solid #444444;
+    border-right: 1px solid #444444;
+    border-top: 1px solid #c9d4d8;
+    border-bottom: 1px solid #444444;
+}
+
+.navbar li ul li a:hover {
+    background-color: #a3a1a1;
+}
+  
+.ecrire p:hover {
+    background-color: grey;
+    cursor: pointer;
+}
