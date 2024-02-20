@@ -1,4 +1,4 @@
-package TD2;
+
 import java.io.*;
 import java.util.*;
 
@@ -8,6 +8,7 @@ public class Table {
     private int nb_domino;
     private Domino[] tab;
 
+    // Constructeur
     public Table(int n){
         this.tab= new Domino[n];
         this.nb_domino=0;
@@ -40,9 +41,7 @@ public class Table {
         }
     }
 
-    public int recherche(){
-        int g, d;
-
+    public int recherche(int g, int d){
         // pose possible à gauche ?
         if (this.tab[0].laGauche() == d || this.tab[0].laGauche() == g) {
             return -1;
