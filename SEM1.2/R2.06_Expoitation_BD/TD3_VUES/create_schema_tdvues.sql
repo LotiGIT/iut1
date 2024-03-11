@@ -31,12 +31,52 @@ create table produit(
       references consommateur (login, email)
 );
 
-create view LannionProducteur [('SAS GIRAUMONT', 'Rennes')]
-as select raison_sociale, ville from producteur
-with check option;
+-- question 3
+
+create view LannionProducteur
+as select * from producteur
+where ville ='Lannion';
+
+select raison_sociale
+from LannionProducteur;
+
+select *
+from LannionProducteur
+where ville ='Lannion';
+
+-- question 4
+select raison_sociale
+from producteur
+where ville ='Lannion';
+
+select *
+from producteur
+where ville='Lannion' and ville <> 'Lannion';
+
 
 CREATE  VIEW  NomsConsommateurs  AS  SELECT  nom,  prenom 
 FROM Consommateur;
 
 CREATE  VIEW  ListeProduits  AS  SELECT  id,  description 
 FROM Produit;
+
+-- question 7
+
+create view LaVueLa as
+select id
+from produit inner join producteur
+on produit_par = raison_sociale
+inner join consommateur
+on consomme_par_email = login
+and consomme_par_email = login
+where consommateur.ville = producteur.ville;
+
+create view ProdNomConso 
+as select * 
+from produit
+where consomme_par_login is NULL;
+
+create view Nb_prod as 
+select produit_par, count(id)
+from produit
+group by produit_par;
