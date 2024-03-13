@@ -66,18 +66,21 @@ G = np.array([ [0,Inf,1,Inf,Inf,Inf], [Inf,0,2,Inf,3,Inf], [1,2,0,4,2,Inf], [Inf
 
 def djikstra(s, graphe):
     
-    D = np.array([Inf,Inf,Inf,Inf,Inf,Inf])
-    D[s] = 0
-    P = np.array([])
-    Q = np.array([[1, 2, 3, 4, 5, 6]])
+    # Une liste D tel que
+    # Tableau représentant le plus court chemin possible
+    tabDistance = np.array([Inf,Inf,Inf,Inf,Inf,Inf]) 
+    D[s] = 0 # Point de départ
+    P = np.array([]) # Liste ou dictionnaire des "parents"
+    Q = np.array([[1, 2, 3, 4, 5, 6]]) # Liste des sommets à visiter
     v = int(input())
     u = int(input())
-    while len(Q) != 0:
-        if v in Q:
+    while len(Q) != 0: # tant que Q est non vide, trouver que v est le minimum
+        for i in range(len(Q+1))# recherche séquentielle 
+        if v in Q: # v qui appartient à l'ensemble Q tel que la distance v est la plus courte
             D[v]=minimum
-            del(Q, v)
-        for u in graphe[v] :
-            if D[u]>D[v]+W(vu):
+            del(Q, v) # enlever (Q, v) càd retirer le chemin des possibilités
+        for u in graphe[v] : # pour u qui est un liste des voisins de v et qui appartient à Q faire : 
+            if D[u]>D[v]+W(vu): # si la distance pour aller à u est supérieur à un autre chemin alors D[u] absorbe cette nouvelle distance et P[u] est égal à v
                 D[u]= D[v]+W(vu)
                 P[u]=v
     return(D, P)
