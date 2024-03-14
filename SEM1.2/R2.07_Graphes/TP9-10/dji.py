@@ -75,7 +75,7 @@ def djikstra(s, graphe):
     v = int(input())
     u = int(input())
     while len(Q) != 0: # tant que Q est non vide, trouver que v est le minimum
-        for i in range(len(Q+1))# recherche séquentielle 
+        for i in range(len(Q+1)):# recherche séquentielle 
         if v in Q: # v qui appartient à l'ensemble Q tel que la distance v est la plus courte
             D[v]=minimum
             del(Q, v) # enlever (Q, v) càd retirer le chemin des possibilités
