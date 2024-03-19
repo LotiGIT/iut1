@@ -14,7 +14,19 @@ public class Course {
     }
 
     public void affiche(ChevalDeCourse c){
-        System.out.println("Nom : "+this.nom);
+        System.out.println("Nom : "+c.getNom()+"\nDotation : "+this.dotation);
+    }
+
+    public String chevalPresent(String nom){
+        return true;
+    }
+
+    public void enregistre(ChevalDeCourse c){
+
+    }
+
+    public void rechercheCheval(String nom){
+        
     }
 
 }

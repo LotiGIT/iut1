@@ -20,20 +20,20 @@ public class Prog {
         System.out.println("Entraineurs : \n");
         System.out.println(e1);
         System.out.println(e2);
-        System.out.println("\n---------------------------\n");
+        System.out.println("---------------------------\n");
         System.out.println("Jockeys : \n");
         System.out.println(j1);
         System.out.println(j2);
-        System.out.println("\n---------------------------\n");
+        System.out.println("---------------------------\n");
         System.out.println("Chevaux : \n");
         System.out.println(c1);
         System.out.println(c2);
         System.out.println(c3);
-        System.out.println("\n---------------------------\n");
+        System.out.println("---------------------------\n");
         System.out.println("Chevaux de courses : \n");
         System.out.println(cc1);
         cc1.affiche();
-        System.out.println("\n---------------------------\n");
+        System.out.println("---------------------------\n");
 
 
         
