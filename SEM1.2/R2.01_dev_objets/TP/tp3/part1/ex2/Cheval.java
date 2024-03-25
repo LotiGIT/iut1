@@ -1,10 +1,15 @@
 public class Cheval {
+    // variables d'instance
     private int numero;
     private String nom;
     private String sexe;
     private String race;
     public static int nbChevaux;
     private int id;
+    
+    public boolean equals(Cheval c){
+        return this.id==c.id;
+    }
 
 
 

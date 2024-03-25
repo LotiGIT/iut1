@@ -16,7 +16,9 @@ public class ChevalDeCourse extends Cheval{
         System.out.println("\nJockey : "+j.getPrenom());
     }
 
-    
+    double getGains(){
+        return this.gains;
+    }
 
 
 }

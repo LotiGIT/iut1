@@ -36,6 +36,12 @@ public class Prog {
         System.out.println("---------------------------\n");
 
 
+        // Création d'une course
+
+        
+
+
+
         
     }
 }
