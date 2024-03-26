@@ -39,7 +39,7 @@ class Graphe2(Graphe):
                 continue
 
             for voisin, poids_arete in self._graphe_dict[sommet_actuel].items():
-                nouvelle_distance = distance_actuelle + poids_arete
+                nouvelle_distance = distnfiance_actuelle + poids_arete
 
                 if nouvelle_distance < distances[voisin]:
                     distances[voisin] = nouvelle_distance
