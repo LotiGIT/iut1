@@ -19,9 +19,6 @@ public class Main extends Application {
 	private Button bnSupprimer = new Button("Supprimer");
 	private Button bnFermer = new Button("Fermer");
 	
-	private Button bnOK = new Button("OK");
-	private Button bnAnnuler = new Button("Annuler");
-	
 	private Button bouton1 = new Button("Bouton 1");
 	private Button bouton2 = new Button("Bn2");
 	private Button bouton3 = new Button("Je suis le bouton 3");
@@ -85,7 +82,7 @@ public class Main extends Application {
 //			
 //			stack.getChildren().addAll(new Rectangle(100,100,Color.BLUE), new Rectangle(80,80,Color.RED), new Label("Mon premier StackPane !"));
 //			StackPane.setAlignment(title, Pos.CENTER);
-//					
+//				
 //				return stack;
 //			}
 	private AnchorPane creerScene() {
@@ -94,35 +91,25 @@ public class Main extends Application {
 		ListView<String> list = new ListView<String>(); 
 		list.getItems().addAll(valeurs);
 		
-//		// Ancrage des composants par rapport aux bords du panneau 
-//		AnchorPane.setTopAnchor(bnAjouter, 10.0); 
-//		AnchorPane.setRightAnchor(bnAjouter, 10.0); 
-//		
-//		AnchorPane.setTopAnchor(bnModifier, 40.0); 
-//		AnchorPane.setRightAnchor(bnModifier, 10.0); 
-//		
-//		AnchorPane.setTopAnchor(bnSupprimer, 70.0); 
-//		AnchorPane.setRightAnchor(bnSupprimer, 10.0); 
-//		
-//		AnchorPane.setBottomAnchor(bnFermer, 10.0); 
-//		AnchorPane.setRightAnchor(bnFermer, 10.0); 
-//		
-//		AnchorPane.setTopAnchor(list, 10.0); 
-//		AnchorPane.setLeftAnchor(list, 10.0); 
-//		AnchorPane.setRightAnchor(list, 100.0);
-//		AnchorPane.setBottomAnchor(list, 10.0); 
-//		
-//		// ajout des composants au panneau 
-//		anchor.getChildren().addAll(bnAjouter, bnModifier, bnSupprimer, bnFermer, list);
-		AnchorPane.setBottomAnchor(bnOK, 10.0); 
+		// Ancrage des composants par rapport aux bords du panneau AnchorPane.setTopAnchor(bnAjouter, 10.0); 
 		AnchorPane.setRightAnchor(bnAjouter, 10.0); 
 		
-		AnchorPane.setTopAnchor(bnAnnuler, 40.0); 
+		AnchorPane.setTopAnchor(bnModifier, 40.0); 
 		AnchorPane.setRightAnchor(bnModifier, 10.0); 
 		
 		AnchorPane.setTopAnchor(bnSupprimer, 70.0); 
 		AnchorPane.setRightAnchor(bnSupprimer, 10.0); 
 		
+		AnchorPane.setBottomAnchor(bnFermer, 10.0); 
+		AnchorPane.setRightAnchor(bnFermer, 10.0); 
+		
+		AnchorPane.setTopAnchor(list, 10.0); 
+		AnchorPane.setLeftAnchor(list, 10.0); 
+		AnchorPane.setRightAnchor(list, 100.0);
+		AnchorPane.setBottomAnchor(list, 10.0); 
+		
+		// ajout des composants au panneau 
+		racine.getChildren().addAll(bnAjouter, bnModifier, bnSupprimer, bnFermer, list);
 		
 		return anchor;
 	}

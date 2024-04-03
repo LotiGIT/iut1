@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Banque {
+    // méthode d'instances
     private String nom;
     private ArrayList<Compte>lesComptes;
 
