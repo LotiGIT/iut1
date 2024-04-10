@@ -1,4 +1,4 @@
-package package1;
+package package2;
 
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -14,8 +14,10 @@ public class Couleur extends Application{
 	public void start(Stage fenetre) throws IOException{ 
 		fenetre.setTitle("Choix d'une couleur");
 		fenetre.setResizable(false);
-		fenetre.setWidth(300);
-		fenetre.setHeight(350);
+		fenetre.setWidth(450);
+		fenetre.setHeight(400);
+		
+		f = fenetre;
 		
 		Scene laScene = new Scene(creerSceneGraph());
 		fenetre.setScene(laScene);

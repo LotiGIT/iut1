@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button minHeight="30.0" minWidth="90.0" mnemonicParsing="false" text="Fermer" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+      <VBox alignment="TOP_CENTER" layoutX="450.0" prefHeight="200.0" prefWidth="150.0" spacing="20.0">
+         <children>
+            <Button minHeight="30.0" minWidth="90.0" mnemonicParsing="false" text="Ajouter..." />
+            <Button minHeight="30.0" minWidth="90.0" mnemonicParsing="false" text="Editer..." />
+            <Button minHeight="30.0" minWidth="90.0" mnemonicParsing="false" text="Supprimer" />
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </VBox>
+      <ListView layoutX="64.0" layoutY="82.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="50.0" />
+      <Label layoutX="77.0" layoutY="14.0" text="Liste des clients" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0" />
+   </children>
+</AnchorPane>

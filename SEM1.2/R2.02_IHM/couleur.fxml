@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="package2.Controleur">
+   <top>
+      <Label fx:id="titre" styleClass="titre" stylesheets="@monStyle.css" text="Choisissez une couleur" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <left>
+      <VBox alignment="CENTER_LEFT" prefHeight="307.0" prefWidth="144.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <RadioButton fx:id="rbBleu" mnemonicParsing="false" onAction="#clickCouleur" onMouseEntered="#entreeBleu" text="Bleu">
+               <toggleGroup>
+                  <ToggleGroup fx:id="selected" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbVert" mnemonicParsing="false" onAction="#clickCouleur" onMouseEntered="#entreeVert" text="Vert" toggleGroup="$selected" />
+            <RadioButton fx:id="rbJaune" mnemonicParsing="false" onAction="#clickCouleur" onMouseEntered="#entreeJaune" text="Jaune" toggleGroup="$selected" />
+            <RadioButton fx:id="rbOrange" mnemonicParsing="false" onAction="#clickCouleur" onMouseEntered="#entreeOrange" text="Orange" toggleGroup="$selected" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <Rectangle fx:id="carre" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="214.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50; -fx-stroke-width: 5;" styleClass="titre" width="242.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" styleClass="zoneBoutons" stylesheets="@monStyle.css">
+         <children>
+            <Button fx:id="bnOK" mnemonicParsing="false" onAction="#valider" styleClass="bouton" stylesheets="@monStyle.css" text="OK" />
+            <Button fx:id="bnAnnuler" mnemonicParsing="false" onAction="#annuler" styleClass="bouton" stylesheets="@monStyle.css" text="Annuler" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>
