@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="316.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="-2.0" layoutY="-2.0" prefHeight="317.0" prefWidth="421.0">
+         <top>
+            <GridPane prefHeight="58.0" prefWidth="346.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="210.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="0.0" prefWidth="136.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField GridPane.columnIndex="1" />
+                  <Label text="Imprimer la carte de la région :">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+         </top>
+         <bottom>
+            <HBox alignment="BOTTOM_RIGHT" maxWidth="359.0" minWidth="150.0" prefHeight="151.0" prefWidth="359.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button maxWidth="50.0" minHeight="0.0" minWidth="150.0" mnemonicParsing="false" prefWidth="50.0" text="Imprimer..." />
+                  <Button minHeight="0.0" minWidth="150.0" mnemonicParsing="false" prefWidth="150.0" text="Annuler" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <left>
+            <VBox prefHeight="147.0" prefWidth="483.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <RadioButton mnemonicParsing="false" text="Couleur">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" text="Recto/Verso">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="170.0" prefWidth="483.0">
+                     <children>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="124.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="76.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField GridPane.columnIndex="1" />
+                              <Label text="NbExemplaires :" />
+                           </children>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

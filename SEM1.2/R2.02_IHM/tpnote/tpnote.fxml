@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tpnote.ControleurCarte">
+   <children>
+      <StackPane alignment="TOP_LEFT" prefHeight="397.0" prefWidth="327.0" stylesheets="@style.css">
+         <children>
+            <ScrollPane prefHeight="250.0" prefWidth="250.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+              </content>
+            </ScrollPane>
+            <ImageView fx:id="image" fitHeight="400.0" fitWidth="400.0" onMouseClicked="#cliqueImage">
+               <image>
+                  <Image url="@carte%20des%20régions.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+            </ImageView>
+            <VBox maxHeight="70.0" maxWidth="40.0" minHeight="70.0" minWidth="40.0" prefHeight="70.0" prefWidth="40.0">
+               <children>
+                  <Button alignment="TOP_LEFT" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="bouton" stylesheets="@style.css" text="+">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="bouton" stylesheets="@style.css" text="-" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </StackPane>
+      <VBox prefHeight="400.0" prefWidth="273.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label styleClass="entete" stylesheets="@style.css" text="Région :" />
+                  <TextField fx:id="textRech" disable="true" styleClass="info" stylesheets="@style.css" text="&lt;selectionnez une région&gt;" />
+               </children>
+            </HBox>
+            <GridPane prefHeight="174.0" prefWidth="311.0" styleClass="zoneInfo" stylesheets="@style.css">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="prompt" stylesheets="@style.css" text="Préfécture" />
+                  <Label styleClass="prompt" stylesheets="@style.css" text="Superficie" GridPane.rowIndex="1" />
+                  <Label styleClass="prompt" stylesheets="@style.css" text="Population" GridPane.rowIndex="2" />
+                  <TextField fx:id="textPref" disable="true" styleClass="info" stylesheets="@style.css" text="&lt;selectionnez une région&gt;" GridPane.columnIndex="1" />
+                  <TextField fx:id="textSup" disable="true" styleClass="info" stylesheets="@style.css" text="&lt;selectionnez une région&gt;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="textPop" disable="true" styleClass="info" stylesheets="@style.css" text="&lt;selectionnez une région&gt;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label styleClass="prompt" stylesheets="@style.css" text="Km2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label styleClass="prompt" stylesheets="@style.css" text="Hab." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Fermer" />
+               </children></HBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>
