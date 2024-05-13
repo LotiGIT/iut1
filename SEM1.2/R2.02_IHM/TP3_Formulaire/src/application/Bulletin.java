@@ -10,7 +10,13 @@ import javafx.stage.Stage;
 
 public class Bulletin extends Application{
 	static private Stage f;
-
+	private String email;
+	private String numero;
+	private String nom;
+	private String prenom;
+	private String adresse;
+	private String ville;
+	private String codePostal;
 
 	public void start(Stage fenetre) throws IOException{ 
 		fenetre.setTitle("Formulaire");
@@ -25,7 +31,7 @@ public class Bulletin extends Application{
 		
 	private Pane creerSceneGraph() throws IOException {
 		FXMLLoader loader;
-		loader = new FXMLLoader(getClass().getResource("formulaire.fxml"));
+		loader = new FXMLLoader(getClass().getResource("/formulaire.fxml"));
 		Pane racine = loader.load();
 		return racine;
 		}
