@@ -16,7 +16,17 @@ def Variance(Serie):
         var += (i - moy) * (i - moy)
     var = (1/len(Serie)) * var
     return var
-def tirages_des(N):
+
+def covariance(Serie1, Serie2):
+    cov = 0
+    moy1 = Moyenne(Serie1)
+    moy2 = Moyenne(Serie2)
+    for i in range(len(Serie1)):
+        cov += (Serie1[i] - moy1) * (Serie2[i] - moy2)
+    cov = (1/len(Serie1)) * cov
+    return cov
+
+def tirages_des(N): 
     return rd.randint(1, 7, N)
 
 def Moy100():
