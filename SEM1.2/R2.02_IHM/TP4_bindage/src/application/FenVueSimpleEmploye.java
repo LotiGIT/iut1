@@ -1,3 +1,5 @@
+package application;
+
 import javafx.beans.binding.*;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,9 +17,9 @@ public class FenVueSimpleEmploye extends Application {
 	private GridPane	racine			= new GridPane();
 	private HBox		zoneBoutons		= new HBox();
 	private Label 		lblMatricule	= new Label("Matricule :");
-	private Label 		lblNom			= new Label("Nom employé :");
+	private Label 		lblNom			= new Label("Nom employï¿½ :");
 	private Label 		lblPoste		= new Label("Poste :");
-	private Label 		lblDepartement	= new Label("Département :");
+	private Label 		lblDepartement	= new Label("Dï¿½partement :");
 	private TextField	txtMatricule	= new TextField();
 	private TextField	txtNom			= new TextField();
 	private TextField	txtPoste		= new TextField();
@@ -27,7 +29,7 @@ public class FenVueSimpleEmploye extends Application {
 	
 	// constructeur : initialisation de la fenetre
 	public void start(Stage f){
-		f.setTitle("Détail d'un employé");
+		f.setTitle("Dï¿½tail d'un employï¿½");
 		f.setResizable(true);
 		f.sizeToScene();
 		f.setResizable(false);
@@ -38,8 +40,15 @@ public class FenVueSimpleEmploye extends Application {
 	// creation du Scene graph
 	private Pane creerSceneGraph() {
 		
-		// A FAIRE : lier les TextFields aux propriétés de l'objet Employe
+		// A FAIRE : lier les TextFields aux propriï¿½tï¿½s de l'objet Employe
+		txtMatricule.txtProperty().bind(Bindings.createStringBinding( ()-> String.valueOf(emp.getMatricule)),
+				emp.matriculeProperty()));
 		
+		txtNom.textProperty().bind(emp.nomProperty());
+		txtPoste.textProperty().bind(emp.posteProperty());
+		
+		txtDepartement.txtProperty().bind(Bindings.createStringBinding( ()-> String.valueOf(emp.getDepartement)),
+				emp.departementProperty()));
 		
 		
 		

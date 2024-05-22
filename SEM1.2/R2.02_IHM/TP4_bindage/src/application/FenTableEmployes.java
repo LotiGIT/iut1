@@ -1,4 +1,4 @@
-
+package application;
 import javafx.application.Application;
 import javafx.beans.binding.*;
 import javafx.beans.value.ChangeListener;
@@ -13,7 +13,7 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 public class FenTableEmployes extends Application {
-	// les données
+	// les donnï¿½es
 	ObservableList<Employe> liste = FXCollections.observableArrayList();
 	
 	// les composants de la fenÃªtre
@@ -33,7 +33,7 @@ public class FenTableEmployes extends Application {
 		liste.add(new Employe(7698,"NOIRET","DIRECTEUR", 30) );
 		liste.add(new Employe(7782,"LESAGE","DIRECTEUR", 10) );
 		
-		f.setTitle("Liste des employés");
+		f.setTitle("Liste des employï¿½s");
 		f.setMinWidth(300);
 		f.setMinHeight(300);
 		f.setResizable(true);
@@ -42,7 +42,7 @@ public class FenTableEmployes extends Application {
 	}
 	
 	private Pane creerSceneGraph() {
-		// création des colonnes
+		// crï¿½ation des colonnes
 		TableColumn<Employe,Integer> colonne1 = new TableColumn<Employe,Integer>("Matricule");
 		colonne1.setCellValueFactory(new PropertyValueFactory<Employe,Integer>("matricule"));
 		tableEmployes.getColumns().add(colonne1);

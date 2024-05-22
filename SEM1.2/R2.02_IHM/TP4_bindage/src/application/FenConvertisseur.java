@@ -24,14 +24,37 @@ public class FenConvertisseur extends Application{
 		final SimpleDoubleProperty valEuros = new SimpleDoubleProperty();
 		final SimpleDoubleProperty valDollars = new SimpleDoubleProperty();
 		
-		// les liaisons
-				txtDollar.bind(txtEuros);
-				
-				mtt1.bind(Bindings.createDoubleBinding(()->Double.parseDouble(montant1.getText()), montant1.textProperty()));
-			
-				mtt2.bind(Bindings.createDoubleBinding(()->Double.parseDouble(montant2.getText()), montant2.textProperty()));
-				
-				total.textProperty().bind(Bindings.createStringBinding( () -> String.valueOf(tt.get()), tt));
+//		// les liaisons
+//		
+		valEuros.bind(Bindings.when(Bindings.equal(txtEuros.textProperty(), ""))
+		.then(0.0)
+		.otherwise
+		(
+				Bindings.createDoubleBinding
+						(
+								()->Double.parseDouble(txtEuros.getText()),
+								txtEuros.textProperty()))
+				);
+//		
+//		// taux de change
+		valDollars.bind(valEuros.multiply(TAUX_DE_CHANGE));
+//		
+//		// affichage du résultat
+//		txtDollar.textProperty().bind(valDollars.asString());
+		
+		// Sans intermediaires
+		txtDollar.textProperty().bind(Bindings.createStringBinding(
+		()->String.valueOf(valDollars.getValue()),
+		valDollars
+		));
+		
+//				txtDollar.bind(txtEuros);
+//				
+//				mtt1.bind(Bindings.createDoubleBinding(()->Double.parseDouble(montant1.getText()), montant1.textProperty()));
+//			
+//				mtt2.bind(Bindings.createDoubleBinding(()->Double.parseDouble(montant2.getText()), montant2.textProperty()));
+//				
+//				total.textProperty().bind(Bindings.createStringBinding( () -> String.valueOf(tt.get()), tt));
 
 		bnFermer.setOnAction(e -> f.close());
 		GridPane grid = new GridPane();

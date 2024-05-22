@@ -1,3 +1,5 @@
+package application;
+
 import javafx.beans.binding.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,7 +13,7 @@ import javafx.geometry.Insets;
 import javafx.application.Application;
 
 public class FenGestionEmployes extends Application {
-	// les données
+	// les donnï¿½es
 	ObservableList<Employe> liste = FXCollections.observableArrayList();
 	
 	// les composants de la fenÃªtre
@@ -23,15 +25,15 @@ public class FenGestionEmployes extends Application {
 	private Button 				bnSupprimer 	= new Button("Supprimer");
 	private Button 				bnFermer 		= new Button("Fermer");
 	private Label 				lblMatricule	= new Label("Matricule (*) :");
-	private Label 				lblNom			= new Label("Nom employé (*) :");
+	private Label 				lblNom			= new Label("Nom employï¿½ (*) :");
 	private Label 				lblPoste		= new Label("Poste :");
-	private Label 				lblDepartement	= new Label("Département (*) :");
+	private Label 				lblDepartement	= new Label("Dï¿½partement (*) :");
 	private TextField			txtMatricule	= new TextField();
 	private TextField			txtNom			= new TextField();
 	private TextField			txtPoste		= new TextField();
 	private TextField			txtDepartement	= new TextField();
 	
-	// constructeur : initialisation de la fenetre et des données
+	// constructeur : initialisation de la fenetre et des donnï¿½es
 	public void start(Stage f){
 		liste.add(new Employe(7369,"LECLERC","SECRETAIRE", 20) );
 		liste.add(new Employe(7499,"BIRAUD","COMMERCIAL", 30) );
@@ -41,7 +43,7 @@ public class FenGestionEmployes extends Application {
 		liste.add(new Employe(7698,"NOIRET","DIRECTEUR", 30) );
 		liste.add(new Employe(7782,"LESAGE","DIRECTEUR", 10) );
 		
-		f.setTitle("Liste des employés");
+		f.setTitle("Liste des employï¿½s");
 		f.sizeToScene();
 		f.setResizable(true);
 		f.setScene(new Scene(creerSceneGraph()));
@@ -64,10 +66,10 @@ public class FenGestionEmployes extends Application {
 		TableColumn<Employe, String> colonne3 = new TableColumn<Employe,String>("Poste");
 		colonne3.setCellValueFactory(new PropertyValueFactory<Employe, String>("poste"));
 		tableEmployes.getColumns().add(colonne3);
-		TableColumn<Employe,Integer> colonne4 = new TableColumn<Employe,Integer>("Dépt");
+		TableColumn<Employe,Integer> colonne4 = new TableColumn<Employe,Integer>("Dï¿½pt");
 		tableEmployes.getColumns().add(colonne4);
 		
-		// A FAIRE : en cas de changement d'élément sélectionné dans la table (clic sur le
+		// A FAIRE : en cas de changement d'ï¿½lï¿½ment sï¿½lectionnï¿½ dans la table (clic sur le
 		// TableView) actualiser les 4 champs de la zone "Detail"
 		tableEmployes.setOnMouseClicked(e -> {
 			
@@ -85,7 +87,7 @@ public class FenGestionEmployes extends Application {
 				Integer.parseInt(txtDepartement.getText())) )
 		);
 		
-		// A FAIRE : griser le bouton Ajouter s'il manque une donnée obligatoire
+		// A FAIRE : griser le bouton Ajouter s'il manque une donnï¿½e obligatoire
 		
 		
 		
@@ -96,7 +98,7 @@ public class FenGestionEmployes extends Application {
 		
 		
 		
-		// A FAIRE : griser le bouton Supprimer si aucune sélection
+		// A FAIRE : griser le bouton Supprimer si aucune sï¿½lection
 		
 		
 		

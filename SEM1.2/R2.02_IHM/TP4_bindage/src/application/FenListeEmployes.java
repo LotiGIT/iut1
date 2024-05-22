@@ -1,4 +1,4 @@
-
+package application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import javafx.application.Application;
 
 public class FenListeEmployes extends Application {
-	// les données
+	// les donnï¿½es
 	ObservableList<String> liste = FXCollections.observableArrayList();
 	
 	// les composants de la fenetre
@@ -25,7 +25,7 @@ public class FenListeEmployes extends Application {
 		liste.add("BIRAUD");
 		liste.add("BERGER");
 		liste.add("MERCIER");
-		f.setTitle("Liste des employés");
+		f.setTitle("Liste des employï¿½s");
 		f.setMinWidth(300);
 		f.setMinHeight(300);
 		f.setResizable(true);

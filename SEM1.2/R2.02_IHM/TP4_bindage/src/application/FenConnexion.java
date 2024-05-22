@@ -1,3 +1,5 @@
+package application;
+
 import javafx.application.Application;
 import javafx.beans.binding.*;
 import javafx.stage.Stage;
@@ -15,9 +17,16 @@ public class FenConnexion extends Application{
 		Label 			lblPassword 	= new Label("Password : ");
 		PasswordField 	txtPassword		= new PasswordField();
 		Button 			bnSeConnecter 	= new Button("Se connecter");
-
+		
+		BooleanBinding 	casErreur 		= Bindings.or(txtLogin.textProperty().isEmpty(), txtPassword.textProperty().isEmpty());
+		
+		
 		bnSeConnecter.setOnAction(e -> f.close());
 		
+		bnSeConnecter.disableProperty().bind(
+				Bindings.when(casErreur).
+				then(true).otherwise(false)
+				);
 		
 		
 		GridPane grid = new GridPane();
