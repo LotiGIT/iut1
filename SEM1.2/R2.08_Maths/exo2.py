@@ -1,3 +1,6 @@
+from sklearn.linear_model import LinearRegression
+
+
 import numpy as np
 import pandas as pd
 
@@ -64,7 +67,29 @@ def covar2(X):
     cov /= len(X)
     return cov
 
-print(covar2(SangliersOAr))
+#print(covar2(SangliersOAr))
 
-print(np.cov(SangliersOAr[:, 0], SangliersOAr[:, 1], rowvar = False, bias = True))
+#print(np.cov(SangliersOAr[:, 0], SangliersOAr[:, 1], rowvar = False, bias = True))
 
+#TP2
+
+#np.array Sangliers0Ar_CR contenant toutes les donn´ees centr´eesr´eduites.
+SangliersOAr_CR = Centreduire(SangliersOAr)
+
+
+#Créer un np.array Y à une colonne, contenant les données sur les montants des dégâts causés par les sangliers (la variable endogène)
+Y = SangliersOAr[:, 1]
+
+#A partir du tableau Sangliers0Ar_CR, cr´eer un np.array X `a 3 colonnes, contenant les 3 autres s´eries statistiques (les variables explicatives).
+X = SangliersOAr_CR[:, 0:3]
+
+linear_regression = LinearRegression()
+linear_regression.fit(X, Y)
+a=linear_regression.coef_
+
+#A partir des valeurs de a et des variables explicatives, cr´eer le tableau `a une colonne Ypred, de pr´ediction des montants des d´egatscaus´es par les sangliers.
+Ypred = np.dot(X, a)
+    
+
+#afficher a 
+print(a)
