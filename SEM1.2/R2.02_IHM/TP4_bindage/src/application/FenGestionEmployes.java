@@ -45,6 +45,8 @@ public class FenGestionEmployes extends Application {
 		
 		f.setTitle("Liste des employ�s");
 		f.sizeToScene();
+		f.setWidth(300);
+		f.setHeight(350);
 		f.setResizable(true);
 		f.setScene(new Scene(creerSceneGraph()));
 		f.show();

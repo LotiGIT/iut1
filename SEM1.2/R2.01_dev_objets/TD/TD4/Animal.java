@@ -29,7 +29,10 @@ public abstract class Animal{
     }
 
     public void cri(String Lion, String Chouette, String Ane){
-        
+    
+    System.out.println("################    Question 3  ##################");
+
+    
 
         
     }
