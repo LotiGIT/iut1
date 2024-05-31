@@ -3,6 +3,7 @@ from sklearn.linear_model import LinearRegression
 
 import numpy as np
 import pandas as pd
+import numpy.linalg as la
 
 SangliersDF = pd.read_csv('Sangliers.csv')
 SangliersDF.columns
@@ -73,23 +74,58 @@ def covar2(X):
 
 #TP2
 
-#np.array Sangliers0Ar_CR contenant toutes les donn´ees centr´eesr´eduites.
+#Question 1
 SangliersOAr_CR = Centreduire(SangliersOAr)
 
 
-#Créer un np.array Y à une colonne, contenant les données sur les montants des dégâts causés par les sangliers (la variable endogène)
+#Question 2 
 Y = SangliersOAr[:, 1]
 
-#A partir du tableau Sangliers0Ar_CR, cr´eer un np.array X `a 3 colonnes, contenant les 3 autres s´eries statistiques (les variables explicatives).
+#Question 3
 X = SangliersOAr_CR[:, 0:3]
 
 linear_regression = LinearRegression()
 linear_regression.fit(X, Y)
 a=linear_regression.coef_
 
-#A partir des valeurs de a et des variables explicatives, cr´eer le tableau `a une colonne Ypred, de pr´ediction des montants des d´egatscaus´es par les sangliers.
-Ypred = np.dot(X, a)
+#Question 7 
+Ypred = 1.075*X[:,0] + a[1]*X[:,1] + a[2]*X[:,2]
     
+#Quesrion 8
+CorSangliers = np.corrcoef(Y, Ypred)
 
-#afficher a 
+CorS=linear_regression.score(X,Y)
+
+
+#Question 10 
+
+X1 = np.hstack((np.ones((X.shape[0], 1)), X))
+
+print("#############    Question 1     ##################")
+print("\n")
+print(SangliersOAr_CR)
+print("\n")
+print("#############    Question 2     ##################")
+print("\n")
+print(Y)
+print("\n")
+print("#############    Question 3     ##################")
+print("\n")
+print(X)
+print("\n")
+print("#############    Question 4     ##################")
+print("\n")
 print(a)
+print("\n")
+print("#############    Question 7     ##################")
+print("\n")
+print(Ypred)
+print("\n")
+print("#############    Question 8     ##################")
+print("\n")
+print(CorSangliers)
+print(CorS)
+print("\n")
+print("#############    Question 10     ##################")
+print("\n")
+print(X1)
