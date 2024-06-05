@@ -19,19 +19,17 @@ def Centreduire(T):
 CollegesAR = np.array(CollegesDF)
 
 #CollegesAR0 contient colonne avec des valeurs numériques
-CollegesAR0 = CollegesAR[ :, [0,2,3,4,5,6,7,8]]
+CollegesAR0 = CollegesAR[ :, [2,3,4,5,6,7,8]]
 
 #valeurs autres que numériques
-CollegesAR1 = CollegesAR[:, [1,9,10]]
+CollegesAR1 = CollegesAR[:, [0,1,9,10]]
 
 
 print(CollegesAR1)
+print(CollegesAR0)
 
 
 
-
-# CollegesAr0 = CollegesAR[:, 1:]
-# CollegesAr1 = CollegesAR[:, 0]
 
 
 

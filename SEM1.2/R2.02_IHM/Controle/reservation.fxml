@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packageNote.CtrlReservation">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label text="Hôtel Les Bains ***" textAlignment="CENTER">
+               <font>
+                  <Font name="Bauhaus 93" size="64.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Label text="M. ou Mme : ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="identite" prefHeight="25.0" prefWidth="300.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="27.0" prefHeight="30.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Label text="Réservation du : ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateArrivee" prefHeight="25.0" prefWidth="130.0" />
+            <Label layoutX="10.0" layoutY="10.0" text="au :">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateDepart" layoutX="38.0" layoutY="10.0" prefHeight="25.0" prefWidth="130.0" />
+         </children>
+      </HBox>
+      <Label layoutX="10.0" layoutY="10.0" text="Choisir un type de chambre :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ListView fx:id="listeTypes" prefHeight="232.0" prefWidth="418.0" />
+            <Button fx:id="bnReserver" layoutX="445.0" layoutY="78.0" mnemonicParsing="false" onAction="#clicReserver" prefHeight="30.0" prefWidth="150.0" text="Réserver..." AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="bnFermer" layoutX="345.0" layoutY="127.0" mnemonicParsing="false" onAction="#clicFermer" prefHeight="30.0" prefWidth="150.0" text="Fermer" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="bnDetail" layoutX="486.0" layoutY="86.0" mnemonicParsing="false" onAction="#clicDetail" prefHeight="30.0" prefWidth="150.0" text="Détail chambre..." AnchorPane.bottomAnchor="150.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
