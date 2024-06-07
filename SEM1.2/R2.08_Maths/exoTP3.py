@@ -29,6 +29,14 @@ print(CollegesAR1)
 print(CollegesAR0)
 
 
+# Question 9 
+
+def DiagBaton(Colonne)
+    m = 
+    M = 
+    inter=[]
+    plt.figure()
+
 
 
 
